@@ -8,12 +8,6 @@ function Single() {
     const param = useParams()
     const [data, setData] = useState();
     useEffect(() => {
-        // axios.get(`https://sheetdb.io/api/v1/yy2hi54tj0omq`).then(res => {
-        //     setData(res.data[+param.id]);
-        // }).catch(err => {
-        //     console.log(err);
-        // })
-
         const res = JSON.parse(localStorage.getItem('eng001'));;
         setData(res[+param.id])
     }, [])
